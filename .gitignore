@@ -2,6 +2,7 @@
 
 # Ignora los archivos de configuración de PyCharm
 .idea/
+.idea/FormPerson.iml
 
 # Ignora los archivos de bytecode de Python
 __pycache__/
