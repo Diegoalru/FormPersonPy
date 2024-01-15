@@ -1,0 +1,17 @@
+# .gitignore
+
+# Ignora los archivos de configuración de PyCharm
+.idea/
+
+# Ignora los archivos de bytecode de Python
+__pycache__/
+*.py[cod]
+
+# Ignora los archivos de entorno virtual de Python
+.venv/
+
+# Ignora los archivos de registro
+*.log
+
+# Ignora los archivos de base de datos SQLite (si se utilizan)
+*.sqlite
