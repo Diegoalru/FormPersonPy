@@ -4,6 +4,9 @@
 .idea/
 .idea/FormPerson.iml
 
+# Ignora los archivos de configuración de Visual Studio Code
+.vscode/
+
 # Ignora los archivos de bytecode de Python
 __pycache__/
 *.py[cod]
