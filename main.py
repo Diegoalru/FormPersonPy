@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """
 This is the main entry point of the application.
 It creates an instance of the PersonForm class and starts the tkinter main loop.
