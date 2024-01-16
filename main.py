@@ -1,3 +1,8 @@
+"""
+This is the main entry point of the application.
+It creates an instance of the PersonForm class and starts the tkinter main loop.
+"""
+
 import tkinter as tk
 
 from create_window import PersonForm

@@ -1,3 +1,7 @@
+"""
+A module that represents a person.
+"""
+
 class Person:
     """
     A class that represents a person.

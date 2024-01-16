@@ -1,3 +1,8 @@
+"""
+This module contains utility functions for the application.
+"""
+
+
 import re
 
 def validate_email(email) -> bool:

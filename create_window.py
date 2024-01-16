@@ -1,5 +1,8 @@
+"""
+Se crea una ventana con los widgets especificados.
+"""
+
 import tkinter as tk
-from tkinter import messagebox
 
 import utils
 
@@ -7,6 +10,10 @@ from person import Person
 
 
 class PersonForm:
+    """
+    This class creates a tkinter window with the specified widgets.
+    """
+
     def __init__(self, root):
         """
         Creates a PersonForm object.
@@ -26,13 +33,17 @@ class PersonForm:
         self.create_window()
 
     def create_window(self):
+        """
+        Creates the window with the specified widgets.
+        :return: None
+        """
         name_label = tk.Label(text="Name: ")
-        # This line of code places the 'name_label' widget in the grid layout of the tkinter window. The 'column'
-        # parameter specifies the column in which the widget is placed, in this case, column 0. The 'row' parameter
-        # specifies the row in which the widget is placed, in this case, row 0. The 'sticky' parameter specifies the
-        # sides of the cell to which the widget sticks. 'tk.E' means the widget sticks to the east or right side of
-        # the cell. The 'padx' and 'pady' parameters specify the amount of padding in the x (horizontal) and y
-        # (vertical) directions respectively.
+        # Places the 'name_label' widget in the grid layout of the tkinter window.
+        # Specifies the column in which the widget is placed.
+        # Specifies the row in which the widget is placed.
+        # 'tk.E' means the widget sticks to the east or right side of the cell.
+        # The 'padx' and 'pady' parameters specify the amount of padding in the x (horizontal)
+        # and y (vertical) directions respectively.
         name_label.grid(column=0, row=0, sticky=tk.E, padx=5, pady=5)
         name_label.grid(column=0, row=0, sticky=tk.E, padx=5, pady=5)
         name_entry = tk.Entry()
@@ -73,6 +84,14 @@ class PersonForm:
 
     @staticmethod
     def submit(name, email, phone, age):
+        """
+        Validates the input and creates a Person object.
+        :param name: The name of the person.
+        :param email: The email of the person.
+        :param phone: The phone of the person.
+        :param age: The age of the person.
+        :return: None
+        """
         if name == "" or email == "" or phone == "" or age == "":
             tk.messagebox.showerror("Error", "All fields are required!")
             return
@@ -90,10 +109,18 @@ class PersonForm:
             return
 
         person = Person(name, email, phone, age)
-        tk.messagebox.showinfo("Person", person.__str__())
+        tk.messagebox.showinfo("Person", person)
 
     @staticmethod
     def clear(name_entry, email_entry, phone_entry, age_entry):
+        """
+        Clears the input fields.
+        :param name_entry: The name entry field.
+        :param email_entry: The email entry field.
+        :param phone_entry: The phone entry field.
+        :param age_entry: The age entry field.
+        :return: None
+        """
         name_entry.delete(0, tk.END)
         email_entry.delete(0, tk.END)
         phone_entry.delete(0, tk.END)
