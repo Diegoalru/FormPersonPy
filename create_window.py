@@ -3,6 +3,7 @@ Se crea una ventana con los widgets especificados.
 """
 
 import tkinter as tk
+from tkinter import messagebox
 
 import utils
 
@@ -93,23 +94,23 @@ class PersonForm:
         :return: None
         """
         if name == "" or email == "" or phone == "" or age == "":
-            tk.messagebox.showerror("Error", "All fields are required!")
+            messagebox.showerror("Error", "All fields are required!")
             return
 
         if not utils.validate_email(email):
-            tk.messagebox.showerror("Email Error", "Email not valid")
+            messagebox.showerror("Email Error", "Email not valid")
             return
 
         if not utils.validate_phone(phone):
-            tk.messagebox.showerror("Phone Error", "Phone not valid")
+            messagebox.showerror("Phone Error", "Phone not valid")
             return
 
         if not utils.validate_age(age):
-            tk.messagebox.showerror("Age Error", "Age not valid")
+            messagebox.showerror("Age Error", "Age not valid")
             return
 
         person = Person(name, email, phone, age)
-        tk.messagebox.showinfo("Person", person)
+        messagebox.showinfo("Person", person)
 
     @staticmethod
     def clear(name_entry, email_entry, phone_entry, age_entry):
